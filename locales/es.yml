@@ -15,14 +15,14 @@ es:
       hero_groups: "Grupos que siguen viendo la cabecera en la portada una vez dentro — úsalo para anunciar algo a los miembros nuevos. Añade una fila y elige los grupos. Vacío la oculta a todos los que hayan iniciado sesión; las visitas sin cuenta siempre la ven."
       cta_icon: "Icono que se muestra encima del título de la llamada a la acción. Usa un nombre de icono de Discourse. Déjalo vacío para no mostrar ninguno."
   hero:
-    title: "Construyamos algo grande juntos"
-    subtitle: "Una comunidad de gente que crea, piensa y hace. Pregunta, comparte ideas y sube de nivel."
-    button_label: "Empezar"
+    title: "construyamos algo grande juntos"
+    subtitle: "una comunidad de gente que crea, piensa y hace: preguntá, compartí ideas y subí de nivel."
+    button_label: "empezar"
   homepage:
     topics:
-      change_view: "Cambiar la vista de temas"
+      change_view: "cambiar la vista de historias"
       link_text: "ver más"
-      empty: "No se encontraron temas."
+      empty: "no hay historias."
       view:
         latest: "lo último"
         hot: "la tendencia"
@@ -30,20 +30,20 @@ es:
         monthly: "top mensual"
         all: "top histórico"
     featured_topics:
-      link_text: "Ver todos los destacados"
-      change_source: "Cambiar la etiqueta o categoría destacada"
-      empty: "No se encontraron temas destacados."
+      link_text: "ver todos los destacados"
+      change_source: "cambiar la etiqueta o el canal destacado"
+      empty: "no hay historias destacadas."
     leaderboard:
-      change_period: "Cambiar el periodo de la clasificación"
+      change_period: "cambiar el periodo de la clasificación"
       period:
         weekly: "karma semanal"
         monthly: "karma mensual"
         total: "karma total"
     events:
-      title: "Últimos eventos"
-      button_label: "Detalles"
-      link_label: "Ver todos los eventos"
+      title: "próximos eventos"
+      button_label: "detalles"
+      link_label: "ver todos los eventos"
     cta:
-      title: "¿Listo para unirte a la conversación?"
-      description: "Crea una cuenta para preguntar, compartir lo que sabes y conectar con la comunidad."
-      button_label: "Regístrate ahora"
+      title: "sumate a la conversación"
+      description: "creá una cuenta para preguntar, compartir lo que sabés y conectar con la comunidad."
+      button_label: "crear cuenta"
