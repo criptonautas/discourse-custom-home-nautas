@@ -41,6 +41,11 @@
   // No panel chrome here: the topic cards inside bring their own surface, and a
   // frame around them showed through as a doubled background.
   &__list {
+    // Topic cards run edge to edge on mobile, as on /latest.
+    @include viewport.until(sm) {
+      margin-inline: calc(var(--space-4) * -1);
+    }
+
     .topic-list {
       margin: 0;
 

@@ -13,6 +13,7 @@ es:
       hero_icon: "Icono que se muestra antes del título del hero. Usa un nombre de icono de Discourse, por ejemplo `far-lightbulb`. Déjalo vacío para no mostrar ninguno."
       hero_image: "Imagen que se muestra junto al texto del hero: a la izquierda en pantallas anchas y encima del texto en pantallas estrechas. Déjala vacía para no mostrar ninguna."
       hero_groups: "Grupos que siguen viendo la cabecera en la portada una vez dentro — úsalo para anunciar algo a los miembros nuevos. Añade una fila y elige los grupos. Vacío la oculta a todos los que hayan iniciado sesión; las visitas sin cuenta siempre la ven."
+      cta_groups: "Grupos que también ven la llamada a la acción al final de la portada una vez dentro. Añade una fila y elige los grupos. Vacío la oculta a todos los que hayan iniciado sesión; las visitas sin cuenta siempre la ven."
       cta_icon: "Icono que se muestra encima del título de la llamada a la acción. Usa un nombre de icono de Discourse. Déjalo vacío para no mostrar ninguno."
   hero:
     title: "construyamos algo grande juntos"
@@ -30,7 +31,7 @@ es:
         monthly: "top mensual"
         all: "top histórico"
     featured_topics:
-      link_text: "ver todos los destacados"
+      link_text: "ver más"
       change_source: "cambiar la etiqueta o el canal destacado"
       empty: "no hay historias destacadas."
     leaderboard:
@@ -42,7 +43,7 @@ es:
     events:
       title: "próximos eventos"
       button_label: "detalles"
-      link_label: "ver todos los eventos"
+      link_label: "ver más"
     cta:
       title: "sumate a la conversación"
       description: "creá una cuenta para preguntar, compartir lo que sabés y conectar con la comunidad."

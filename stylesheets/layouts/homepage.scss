@@ -13,6 +13,12 @@
       "homepage-right"
       "homepage-cta";
     margin-block: var(--space-6);
+
+    // Horizon only pads #main-outlet children from sm up; below that /latest
+    // gives its controls --space-4, so the homepage does the same.
+    @include viewport.until(sm) {
+      padding-inline: var(--space-4);
+    }
   }
 
   @container homepage-blocks (width > 800px) {

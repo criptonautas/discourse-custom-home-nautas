@@ -45,9 +45,9 @@ export default class BlockLeaderboard extends Component {
   @tracked selectedKey = preferences.get(PERIOD_KEY);
 
   get selected() {
-    // Visitors get the all-time board and no picker.
+    // Visitors get the monthly board and no picker.
     if (!this.currentUser) {
-      return PERIODS.find((o) => o.key === "all");
+      return PERIODS.find((o) => o.key === "monthly");
     }
     return (
       PERIODS.find((o) => o.key === this.selectedKey) ??

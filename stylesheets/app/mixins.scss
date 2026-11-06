@@ -46,7 +46,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-1);
-  padding: 0;
+
+  // Room for the hover background and ring; the negative margin keeps the
+  // text where it sits at rest.
+  padding: var(--space-1) var(--space-2);
+  margin: calc(var(--space-1) * -1) calc(var(--space-2) * -1);
+  border-radius: var(--d-button-border-radius);
   background: none;
   border: none;
   color: var(--primary);
@@ -62,12 +67,6 @@
     @media (prefers-reduced-motion: reduce) {
       transition: none;
     }
-  }
-
-  // Core's mobile list-control toggle keeps its colour on hover; so does this.
-  &:hover,
-  &:focus {
-    background: none;
   }
 
   // Applied by float-kit to the trigger while the menu is open.

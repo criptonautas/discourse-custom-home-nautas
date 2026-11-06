@@ -14,6 +14,13 @@ const featuredTags = asList(settings.featured_topics_tags);
 const featuredCategoryIds = asList(settings.featured_topics_categories);
 
 export default apiInitializer((api) => {
+  // Same id-to-name lookup as hero_groups in main-outlet-blocks.
+  const site = api.container.lookup("service:site");
+  const ctaGroups = (settings.cta_groups || [])
+    .flatMap((row) => row.groups || [])
+    .map((id) => site.groupsById?.[id]?.name)
+    .filter(Boolean);
+
   api.renderBlocks("homepage-blocks", [
     {
       block: BlockFeaturedTopics,
@@ -80,7 +87,7 @@ export default apiInitializer((api) => {
           id: "homepage-leaderboard",
           args: {
             count: settings.leaderboard_count,
-            period: "weekly",
+            period: "monthly",
           },
           conditions: {
             type: "setting",
@@ -100,7 +107,14 @@ export default apiInitializer((api) => {
         buttonLink: getURL(settings.cta_link),
         icon: settings.cta_icon,
       },
-      conditions: { type: "user", loggedIn: false },
+      conditions: ctaGroups.length
+        ? {
+            any: [
+              { type: "user", loggedIn: false },
+              { type: "user", groups: ctaGroups },
+            ],
+          }
+        : { type: "user", loggedIn: false },
     },
   ]);
 });
