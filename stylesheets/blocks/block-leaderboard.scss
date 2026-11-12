@@ -12,6 +12,11 @@
     justify-content: space-between;
     gap: var(--space-3);
     padding: var(--card-padding);
+
+    // Mobile drops the box, so the title lines up with the list below it.
+    @include viewport.until(md) {
+      padding-inline: 0;
+    }
   }
 
   &__heading {
@@ -27,9 +32,14 @@
     @include section-picker;
   }
 
+  // The box only frames the narrow side column; on mobile the board runs as
+  // wide as the sections above it.
   &__list {
-    @include panel;
-    @include panel-body;
+    @include viewport.from(md) {
+      @include panel;
+      @include panel-body;
+    }
+
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
