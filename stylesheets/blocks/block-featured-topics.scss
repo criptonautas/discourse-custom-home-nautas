@@ -39,7 +39,7 @@
     scroll-snap-type: x mandatory;
     scroll-padding-inline: var(--space-1);
 
-    // Room for the card hover shadow, which would otherwise be clipped.
+    // Room for the focus ring, which the scroller would otherwise clip.
     padding-block: var(--space-1) var(--space-2);
     padding-inline: var(--space-1);
     margin-inline: calc(var(--space-1) * -1);
@@ -58,12 +58,10 @@
     justify-content: space-between;
     color: var(--primary);
     text-decoration: none;
-    transition: box-shadow 0.15s ease;
 
-    // Shadow only: the cards stretch to the tallest in the row, and lifting
-    // something that tall read as a jump and clipped its top border.
+    // Same hover as the topic cards below: an accent border, no shadow.
     &:hover {
-      box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
+      border-color: var(--accent-color);
     }
   }
 

@@ -47,13 +47,16 @@
   align-items: center;
   gap: var(--space-1);
 
-  // Room for the hover background and ring; the negative margin keeps the
-  // text where it sits at rest.
-  padding: var(--space-1) var(--space-2);
-  margin: calc(var(--space-1) * -1) calc(var(--space-2) * -1);
+  // Room for the hover background; the negative margin keeps the text where
+  // it sits at rest.
+  padding: var(--space-2) var(--space-3);
+  margin: calc(var(--space-2) * -1) calc(var(--space-3) * -1);
   border-radius: var(--d-button-border-radius);
   background: none;
-  border: none;
+
+  // Core's .btn:hover sets this border; having it at rest too keeps the
+  // trigger from growing 1px on hover.
+  border: var(--d-button-border);
   color: var(--primary);
   font: inherit;
   letter-spacing: inherit;
@@ -69,9 +72,15 @@
     }
   }
 
-  // Applied by float-kit to the trigger while the menu is open.
-  &.-expanded .d-icon {
-    transform: rotate(180deg);
+  // Applied by float-kit to the trigger while the menu is open: it keeps the
+  // hover look while the pointer is in the menu.
+  &.-expanded {
+    background-color: var(--d-button-default-bg-color--hover);
+    color: var(--d-button-default-text-color--hover);
+
+    .d-icon {
+      transform: rotate(180deg);
+    }
   }
 }
 
